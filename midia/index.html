@@ -3,162 +3,159 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Item 4: Título da aba e Favicon -->
+
+    <!-- [Item 4] Título da guia e Favicon -->
     <title>Aprendendo HTML e CSS</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 
-    <!-- Item 5: Fonte do Google Fonts (Poppins) -->
+    <!-- [Item 5] Importação da fonte do Google Fonts (Roboto) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
     <style>
-        /* Item 1: Cor de fundo em todo o body */
+        /* [Item 1] Cor de fundo em todo o body */
         body {
-            background-color: #eef2f7;
-            font-family: Arial, sans-serif;
+            background-color: #dce4ec;
             margin: 20px;
-            color: #333;
+            font-family: Arial, sans-serif;
         }
 
-        /* Item 1 e 5: H2 centralizado, cor alterada, Google Fonts e box-shadow */
+        /* [Item 5] H2 do exercício 1 centralizado, com outra cor, Google Fonts e box-shadow */
         h2 {
             text-align: center;
-            color: #1a365d;
-            font-family: 'Poppins', sans-serif;
+            color: #0b3b60;
+            font-family: 'Roboto', sans-serif;
             background-color: #ffffff;
-            padding: 15px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-            border-radius: 6px;
+            padding: 12px;
+            box-shadow: 3px 3px 6px #888888;
         }
 
-        /* Estrutura dos blocos principais */
-        main {
-            max-width: 850px;
-            margin: 0 auto;
-        }
-
-        section {
-            background-color: #ffffff;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 6px;
-        }
-
-        /* Item 3: Estilização da tabela abaixo do vídeo */
+        /* [Item 3] Estilização básica da tabela */
         table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 20px;
+            margin-top: 15px;
+            background-color: #ffffff;
         }
 
         table, th, td {
-            border: 1px solid #b0bec5;
+            border: 1px solid black;
         }
 
-        th {
-            background-color: #2c3e50;
-            color: #ffffff;
-            padding: 10px;
+        th, td {
+            padding: 8px;
             text-align: left;
         }
 
-        td {
-            padding: 8px 10px;
+        th {
+            background-color: #b0c4de;
         }
 
-        /* Item 6: Texto longo dividido em duas colunas */
-        .texto-duas-colunas {
+        /* [Item 6] Divisão de texto longo em 2 colunas com column-count */
+        .texto-em-colunas {
             column-count: 2;
-            column-gap: 30px;
+            column-gap: 25px;
             text-align: justify;
         }
 
-        /* Item 7: Recursos do capítulo de Bordas (estilos, espessuras e raio) */
-        .exemplo-bordas {
-            margin-top: 15px;
+        /* [Item 7] Recursos do capítulo de CSS Bordas (estilos, larguras, cores e cantos) */
+        .minha-borda {
+            background-color: #ffffff;
             padding: 15px;
-            background-color: #f7fafc;
-            border-top: 4px solid #2b6cb0;
-            border-right: 4px dashed #4299e1;
-            border-bottom: 4px dotted #63b3ed;
-            border-left: 4px double #2b6cb0;
-            border-radius: 10px;
+            margin-top: 15px;
+            border-top: 3px solid #0055a5;
+            border-right: 3px dashed #ff6600;
+            border-bottom: 3px dotted #008800;
+            border-left: 3px double #990000;
+            border-radius: 8px;
         }
     </style>
 </head>
 <body>
 
-    <!-- Estrutura semântica: Cabeçalho -->
+    <!-- [Item 1 e 5] Estrutura semântica: Cabeçalho com o título H2 solicitado -->
     <header>
-        <!-- Item 1 e 5: Título H2 solicitado -->
         <h2>Exercício programação web</h2>
     </header>
 
-    <!-- Estrutura semântica: Conteúdo principal -->
+    <!-- Estrutura semântica: Conteúdo Principal -->
     <main>
+        <!-- [Item 2] Inserção de Áudio e Vídeo -->
         <section>
-            <!-- Item 2: Áudio e Vídeo (usando a tag nativa de vídeo para evitar erros de iframe) -->
-            <h3>Reprodução de Mídia</h3>
-            
-            <p>Áudio:</p>
+            <h3>Áudio e Vídeo</h3>
+
+            <p>Ouça o áudio:</p>
             <audio controls>
-                <source src="Listen To Me - Asher Fulero.mp3" type="audio/mp3">
-                O seu navegador não suporta a tag de áudio.
+                <source src="midia/Listen To Me - Asher Fulero.mp3" type="audio/mp3">
+                Seu navegador não suporta a tag de áudio.
             </audio>
 
-            <p>Vídeo:</p>
-            <video width="480" height="270" controls>
-                <source src="https://www.youtube.com/embed/0m7bBIlw4ZM" type="video/mp4">
-                O seu navegador não suporta a tag de vídeo.
-            </video>
+            <p>Assista ao vídeo:</p>
+            <iframe width="315" height="560" 
+                    src="https://www.youtube.com/embed/0m7bBIlw4ZM" 
+                    title="Vídeo da atividade" 
+                    frameborder="0" 
+                    allowfullscreen>
+            </iframe>
 
-            <!-- Item 3: Tabela logo abaixo do vídeo -->
-            <h3>Tabela de Aulas</h3>
+            <!-- [Item 3] Tabela logo abaixo do vídeo -->
+            <h3>Tabela de Informações</h3>
             <table>
                 <thead>
                     <tr>
-                        <th>Semana</th>
-                        <th>Tópico</th>
-                        <th>Status</th>
+                        <th>Item</th>
+                        <th>Descrição</th>
+                        <th>Nota</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Semana 1</td>
-                        <td>Tags Básicas e Semântica HTML5</td>
-                        <td>Concluído</td>
+                        <td>1</td>
+                        <td>Estrutura semântica e cor de fundo</td>
+                        <td>1.5</td>
                     </tr>
                     <tr>
-                        <td>Semana 2</td>
-                        <td>CSS: Cores, Fontes e Bordas</td>
-                        <td>Em andamento</td>
+                        <td>2</td>
+                        <td>Inserção de áudio e vídeo</td>
+                        <td>1.5</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Tabela abaixo do vídeo</td>
+                        <td>2.0</td>
                     </tr>
                 </tbody>
             </table>
         </section>
 
-        <!-- Item 6: Uso de section e article com texto dividido em 2 colunas -->
+        <!-- [Item 6] Uso de section e article com texto dividido em 2 colunas -->
         <section>
             <article>
-                <h3>Publicação Informativa</h3>
-                <div class="texto-duas-colunas">
-                    O desenvolvimento web combina a criação estrutural de páginas através da marcação semântica com a formatação visual oferecida pelas folhas de estilo em cascata. O correto emprego dos elementos estruturantes permite não apenas uma leitura lógica e organizada do código, mas também otimiza a indexação do conteúdo por mecanismos de busca e ferramentas de acessibilidade. À medida que novas propriedades de estilo são incorporadas ao projeto, a separação clara entre a apresentação visual e a informação textual consolida uma arquitetura limpa, eficiente e de fácil manutenção ao longo do ciclo de vida da aplicação.
+                <h3>Texto com Divisão em Duas Colunas</h3>
+                <div class="texto-em-colunas">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+                    </p>
+                    <p>
+                        Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum.
+                    </p>
                 </div>
             </article>
 
-            <!-- Item 7: Criação baseada no capítulo de Bordas do CSS -->
-            <article class="exemplo-bordas">
-                <h4>Caixa com Estilos de Bordas</h4>
-                <p>Este elemento foi estilizado aplicando diferentes propriedades de contorno (sólida, tracejada, pontilhada e dupla) com cantos arredondados, demonstrando os conceitos de estilização de bordas em CSS.</p>
+            <!-- [Item 7] Elemento criado usando o capítulo de Bordas do CSS -->
+            <article class="minha-borda">
+                <h4>Exemplo de Bordas com CSS</h4>
+                <p>
+                    Esta caixa demonstra o uso de diferentes estilos de contorno (solid, dashed, dotted e double), além da propriedade border-radius para arredondar os cantos.
+                </p>
             </article>
         </section>
     </main>
 
     <!-- Estrutura semântica: Rodapé -->
     <footer>
-        <p style="text-align: center; font-size: 0.85em; color: #718096;">Desenvolvimento Web &copy; 2026</p>
+        <p style="text-align: center; margin-top: 30px;">Atividade de Programação Web</p>
     </footer>
 
 </body>
